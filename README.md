@@ -72,7 +72,7 @@ python evaluate.py --config config.yaml
 
 Present and discuss the results obtained from your experiments. Include metrics, visualizations, and any other relevant information.
 
-## 3. References
+## References
 
 List any papers, articles, or resources related to PointNet and point cloud classification.
 
