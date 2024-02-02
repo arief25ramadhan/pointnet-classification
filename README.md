@@ -6,7 +6,7 @@ In this repository, we will implement the PointNet architecture for point clouds
 
 ### 1.1. Dataset
 
-We use the Princeton 3D Shapenets Data of 10 classes (ModelNet10) which consists of daily objects such as chair, table, and plane. The link to the dataset can be found [here](https://3dshapenets.cs.princeton.edu/).
+We use the Princeton 3D Shapenets data of 10 classes (ModelNet10) which consists of daily objects such as chair, table, and plane. The link to the dataset can be found [here](https://3dshapenets.cs.princeton.edu/).
 
 ```plaintext
 Dataset: 3D Shapenets (ModelNet10)
