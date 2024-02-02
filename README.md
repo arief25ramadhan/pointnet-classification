@@ -20,13 +20,13 @@ Dataset: 3D Shapenets Dataset
 PointNet is a neural network designed for processing point cloud data. It employs a shared multi-layer perceptron (MLP) to process each point independently to capture local features. Additionally, PointNet introduces a symmetric function to aggregate information from all points, ensuring the network is permutation-invariant, meaning it produces the same output regardless of the order of input points. Figure 1 displays the PointNet architecture diagram.
 
 <p align="center">
-  <img src="assets/pointnet.jpg" width="350" title="hover text">
+  <img src="assets/pointnet.jpg" width="500" title="hover text">
 </p>
 
 PointNet is effective in recognizing and classifying objects in 3D space. It is used for tasks like segmentation and classification, as shown by Figure 2.
 
 <p align="center">
-  <img src="assets/teaser.jpg" width="350" title="hover text">
+  <img src="assets/teaser.jpg" width="500" title="hover text">
 </p>
 
 
