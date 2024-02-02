@@ -32,11 +32,6 @@ PointNet is effective in recognizing and classifying objects in 3D space. It is 
 
 ## 2. Usage
 
-- [Installation](#installation)
-- [Training](#training)
-- [Evaluation](#evaluation)
-- [Results](#results)
-
 ### 2.1. Installation
 
 1. Clone the repository:
