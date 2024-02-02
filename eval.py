@@ -1,3 +1,22 @@
+import os
+import glob
+import trimesh
+import numpy as np
+from tensorflow import data as tf_data
+from keras import ops
+import keras
+from keras import layers
+from matplotlib import pyplot as plt
+
+# Model
+## Create a basic model instance
+model = create_model()
+
+## Loads the weights
+checkpoint_path = "model/cp.ckpt"
+model.load_weights(checkpoint_path)
+
+# Dataset
 data = test_dataset.take(1)
 
 points, labels = list(data)[0]

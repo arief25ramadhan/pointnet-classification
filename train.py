@@ -23,4 +23,13 @@ model.compile(
     metrics=["sparse_categorical_accuracy"],
 )
 
-model.fit(train_dataset, epochs=20, validation_data=validation_dataset)
+# Train model
+checkpoint_path = "model/cp.ckpt"
+checkpoint_dir = os.path.dirname(checkpoint_path)
+
+# Create a callback that saves the model's weights
+cp_callback = tf.keras.callbacks.ModelCheckpoint(filepath=checkpoint_path,
+                                                save_weights_only=True,
+                                                verbose=1)
+
+model.fit(train_dataset, epochs=20, validation_data=validation_dataset, callbacks=[cp_callback])
