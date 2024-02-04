@@ -1,4 +1,5 @@
 import os
+import pickle
 import glob
 import trimesh
 import numpy as np
@@ -17,6 +18,9 @@ print("Load Data")
 data = POINTCLOUD_DATA()
 train_points, test_points, train_labels, test_labels, CLASS_MAP = data.parse_dataset()
 train_dataset, validation_dataset, test_dataset = data.get_dataset(train_points, test_points, train_labels, test_labels)
+
+with open('model/class_map.pkl', 'wb') as handle:
+    pickle.dump(CLASS_MAP, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
 # Load model
 print("Load Model")

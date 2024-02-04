@@ -1,5 +1,9 @@
 # Point Cloud Classification with Point Net
 
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
+![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white)
+
 ## 1. Project Summary
 
 In this repository, we will implement the PointNet architecture for point clouds classification. This architecture was introduced in the paper titled <em>PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation</em> by Charles R. Qi, et al at the Neural Information Processing Systems (NeurIPS) conference in 2016.
