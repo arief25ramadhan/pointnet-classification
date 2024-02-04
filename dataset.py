@@ -2,8 +2,8 @@ import os
 import glob
 import trimesh
 import numpy as np
+import tensorflow as tf
 from tensorflow import data as tf_data
-from keras import ops
 import keras
 from keras import layers
 from matplotlib import pyplot as plt
@@ -11,11 +11,7 @@ from matplotlib import pyplot as plt
 class POINTCLOUD_DATA:
 
     def __init__(self, num_points=2048, num_classes=10, batch_size=32):
-        self.data_dir = keras.utils.get_file("modelnet.zip",
-        "http://3dvision.princeton.edu/projects/2014/3DShapeNets/ModelNet10.zip",
-        extract=True,
-        )
-        self.data_dir = os.path.join(os.path.dirname(self.data_dir), "ModelNet10")
+        self.data_dir = 'dataset/ModelNet10'
         self.num_points = num_points
         self.num_classes = num_classes
         self.batch_size = batch_size
@@ -54,9 +50,9 @@ class POINTCLOUD_DATA:
 
     def augment(self, points, label):
         # jitter points
-        points += keras.random.uniform(points.shape, -0.005, 0.005, dtype="float64")
+        points += tf.random.uniform(points.shape, -0.005, 0.005, dtype="float64")
         # shuffle points
-        points = keras.random.shuffle(points)
+        points = tf.random.shuffle(points)
         return points, label
 
 
@@ -73,8 +69,3 @@ class POINTCLOUD_DATA:
         validation_dataset = dataset.skip(train_dataset_size).batch(self.batch_size)
 
         return train_dataset, validation_dataset, test_dataset
-
-# Load dataset
-data = POINTCLOUD_DATA()
-train_points, test_points, train_labels, test_labels, CLASS_MAP = data.parse_dataset()
-train_dataset, validation_dataset, test_dataset = data.get_dataset(train_points, test_points, train_labels, test_labels)

@@ -1,6 +1,7 @@
 numpy
 pandas
-tensorflow==2.15.*
-keras==2.15.*
+tensorflow[and-cuda]
+keras
+keras_core
 matplotlib
 trimesh

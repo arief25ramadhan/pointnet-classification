@@ -3,7 +3,7 @@ import glob
 import trimesh
 import numpy as np
 from tensorflow import data as tf_data
-from keras import ops
+from keras_core import ops
 import keras
 from keras import layers
 
@@ -42,12 +42,12 @@ class POINTNET_MODEL:
         bias = keras.initializers.Constant(np.eye(num_features).flatten())
         reg = OrthogonalRegularizer(num_features)
 
-        x = conv_bn(inputs, 32)
-        x = conv_bn(x, 64)
-        x = conv_bn(x, 512)
+        x = self.conv_bn(inputs, 32)
+        x = self.conv_bn(x, 64)
+        x = self.conv_bn(x, 512)
         x = layers.GlobalMaxPooling1D()(x)
-        x = dense_bn(x, 256)
-        x = dense_bn(x, 128)
+        x = self.dense_bn(x, 256)
+        x = self.dense_bn(x, 128)
         x = layers.Dense(
             num_features * num_features,
             kernel_initializer="zeros",

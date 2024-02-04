@@ -2,7 +2,7 @@
 
 ## 1. Project Summary
 
-In this repository, we will implement the PointNet architecture for point clouds classification.
+In this repository, we will implement the PointNet architecture for point clouds classification. This architecture was introduced in the paper titled "PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation," by Charles R. Qi, Hao Su, Kaichun Mo, and Leonidas J. Guibas at the Neural Information Processing Systems (NeurIPS) conference in 2016.
 
 ### 1.1. Dataset
 
@@ -17,7 +17,7 @@ Dataset: 3D Shapenets (ModelNet10)
 
 ### 1.2. Architecture
 
-PointNet is a neural network designed for processing point cloud data. It employs a shared multi-layer perceptron (MLP) to process each point independently to capture local features. Additionally, PointNet introduces a symmetric function to aggregate information from all points, ensuring the network is permutation-invariant, meaning it produces the same output regardless of the order of input points. Figure 1 displays the PointNet architecture diagram.
+PointNet is a neural network architecture designed for processing and analyzing point clouds. It employs a shared multi-layer perceptron (MLP) to process each point independently to capture local features. It also introduces a symmetric function to aggregate information from all points, ensuring the network is permutation-invariant, meaning it produces the same output regardless of the order of input points. Figure 1 displays the PointNet architecture diagram.
 
 <p align="center">
   <img src="assets/pointnet.jpg" width="600" title="hover text">
@@ -34,7 +34,7 @@ PointNet is effective in recognizing and classifying objects in 3D space. It is 
 
 ### 2.1. Installation
 
-1. Clone the repository:
+1. To clone the repository:
 
     ```bash
     git clone https://github.com/your-username/pointcloud-classification.git
