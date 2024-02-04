@@ -2,7 +2,9 @@
 
 ## 1. Project Summary
 
-In this repository, we will implement the PointNet architecture for point clouds classification. This architecture was introduced in the paper titled "PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation," by Charles R. Qi, Hao Su, Kaichun Mo, and Leonidas J. Guibas at the Neural Information Processing Systems (NeurIPS) conference in 2016.
+In this repository, we will implement the PointNet architecture for point clouds classification. This architecture was introduced in the paper titled <em>PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation</em> by Charles R. Qi, et al at the Neural Information Processing Systems (NeurIPS) conference in 2016.
+
+This project is for learning purposes. The code I used in this repository is heavily based on the post by Keras Team (David Griffiths) in this [notebook](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/vision/ipynb/pointnet.ipynb#scrollTo=GqHrVYP5bQKn) and [web page](https://keras.io/examples/vision/pointnet/).
 
 ### 1.1. Dataset
 
@@ -34,41 +36,57 @@ PointNet is effective in recognizing and classifying objects in 3D space. It is 
 
 ### 2.1. Installation
 
-1. To clone the repository:
+1. First, you need to clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/pointcloud-classification.git
-    cd pointcloud-classification
+    git clone https://github.com/arief25ramadhan/pointnet-classification.git
+    cd pointnet-classification
     ```
 
-2. Install dependencies:
+2. Then, install dependencies:
 
     ```bash
     pip install -r requirements.txt
     ```
 
-### 2.2.Training
+### 2.2. Download the Dataset
 
-Provide details on how to train the PointNet model on your dataset. Include hyperparameters, training script usage, and any additional information.
+1. Visit this [link](https://3dshapenets.cs.princeton.edu/) to download the dataset, and press the download button of the ModelNet10.zip. 
+2. Extract the downloaded zip file.
+3. Define your dataset folder path in the dataset.py file.
 
-```bash
-python train.py --config config.yaml
-```
+### 2.3.Training
 
-### 2.3. Evaluation
-
-Explain how to evaluate the trained model on a test set.
+To train the model, run this command:
 
 ```bash
-python evaluate.py --config config.yaml
+python train.py
 ```
 
-### 2.4. Results
+### 2.4. Inference
 
-Present and discuss the results obtained from your experiments. Include metrics, visualizations, and any other relevant information.
+Once you have the dataset and trained model, you can perform inference by running:
+
+```bash
+python inference.py
+```
+
+Make sure you define the model path and test path correctly.
+
+### 2.5. Results
+
+After training the model for 20 epochs, the models achieved an accuracy of 72% on the validation set. Note that this project is only for learning purposes. Creating the most accurate model, which requires a lot of tuning and training, is not our priority. Visually, the inference result of the model is shown by Figure 3 below. 
+
+<p align="center">
+  <img src="assets/results.png" width="500" title="hover text">
+</p>
+
+
 
 ## References
 
-List any papers, articles, or resources related to PointNet and point cloud classification.
-
 1. Qi, Charles R., et al. "Pointnet: Deep learning on point sets for 3d classification and segmentation." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2017.
+
+2. Original notebook by David Griffiths: https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/vision/ipynb/pointnet.ipynb#scrollTo=GqHrVYP5bQKn
+
+3. Original tutorial by David Griffiths: https://keras.io/examples/vision/pointnet/
