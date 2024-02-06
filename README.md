@@ -79,7 +79,7 @@ Make sure you define the model path and test path correctly.
 
 ### 2.5. Results
 
-After training the model for 20 epochs, the models achieved an accuracy of 72% on the validation set. Note that this project is only for learning purposes. Creating the most accurate model, which requires a lot of tuning and training, is not our priority. Visually, the inference result of the model is shown by Figure 3 below. 
+After training the model for 20 epochs, the models achieved an accuracy of 80% on the validation set. Note that this project is only for learning purposes. Creating the most accurate model, which requires a lot of tuning and training, is not our priority. Visually, the inference result of the model is shown by Figure 3 below. 
 
 <p align="center">
   <img src="assets/results.png" width="500" title="hover text">
